@@ -15,26 +15,26 @@ CREATE DATABASE fridgeman;
 ```
 3. Create stock, users, and location tables.
 ```
-CREATE TABLE stock {
+CREATE TABLE stock (
   stock_id SERIAL PRIMARY KEY,
   name varchar(50) NOT NULL,
   quantity integer NOT NULL,
   location varchar(50) NOT NULL,
   expiration varchar(300) NOT NULL,
   email varchar(150) NOT NULL
-};
+);
 
-CREATE TABLE users {
+CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   email varchar(150) UNIQUE NOT NULL,
   password varchar(255) NOT NULL
-};
+);
 
-CREATE TABLE location {
+CREATE TABLE location (
   location_id SERIAL PRIMARY KEY,
   name varchar(50) NOT NULL,
   email varchar(150) NOT NULL
-};
+);
 ```
 
 ### Client & Server Setup:
